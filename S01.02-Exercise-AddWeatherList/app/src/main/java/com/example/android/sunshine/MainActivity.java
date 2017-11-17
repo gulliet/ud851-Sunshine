@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         weatherDisplay = (TextView) findViewById(R.id.tv_weather_data);
 
-        // TODO (3) Create an array of Strings that contain fake weather data
+        String [] weatherData;
 
         // TODO (4) Append each String from the fake weather data array to the TextView
     }
