@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.android.sunshine.data.SunshinePreferences;
@@ -114,5 +115,17 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    // TODO (7) Override onOptionsItemSelected to handle clicks on the refresh button
+    // completed (7) Override onOptionsItemSelected to handle clicks on the refresh button
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_refresh:
+                loadWeatherData();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
