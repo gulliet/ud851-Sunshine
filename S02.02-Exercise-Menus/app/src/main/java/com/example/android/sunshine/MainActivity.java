@@ -18,6 +18,8 @@ package com.example.android.sunshine;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.TextView;
 
 import com.example.android.sunshine.data.SunshinePreferences;
@@ -25,6 +27,7 @@ import com.example.android.sunshine.utilities.NetworkUtils;
 import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
 
 import java.net.URL;
+import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -101,8 +104,15 @@ public class MainActivity extends AppCompatActivity {
     // completed (3) Add one item to the menu with an ID of action_refresh
     // completed (4) Set the title of the menu item to "Refresh" using strings.xml
 
-    // TODO (5) Override onCreateOptionsMenu to inflate the menu for this Activity
-    // TODO (6) Return true to display the menu
+    // completed (5) Override onCreateOptionsMenu to inflate the menu for this Activity
+    // completed (6) Return true to display the menu
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.forecast, menu);
+        return true;
+    }
 
     // TODO (7) Override onOptionsItemSelected to handle clicks on the refresh button
 }
