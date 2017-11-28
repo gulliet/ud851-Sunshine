@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_refresh:
                 Toast.makeText(getApplicationContext(), "Forecast", Toast.LENGTH_LONG).show();
+                mWeatherTextView.setText("");
                 loadWeatherData();
                 return true;
             default:
