@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.android.sunshine.data.SunshinePreferences;
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
     // completed (6) Add a TextView variable for the error message display
     private TextView mErrorMsgTextView;
 
-    // TODO (16) Add a ProgressBar variable to show and hide the progress bar
+    // completed (16) Add a ProgressBar variable to show and hide the progress bar
+    private ProgressBar mContentLoadingProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
         // completed (7) Find the TextView for the error message using findViewById
         mErrorMsgTextView = (TextView) findViewById(R.id.tv_error_msg);
 
-        // TODO (17) Find the ProgressBar using findViewById
+        // completed (17) Find the ProgressBar using findViewById
+        mContentLoadingProgressBar = (ProgressBar) findViewById(R.id.pb_content_loading);
 
         /* Once all of our views are setup, we can load the weather data. */
         loadWeatherData();
@@ -83,7 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
     public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
 
-        // TODO (18) Within your AsyncTask, override the method onPreExecute and show the loading indicator
+        // completed (18) Within your AsyncTask, override the method onPreExecute and show the loading indicator
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            mContentLoadingProgressBar.setVisibility(View.VISIBLE);
+        }
 
         @Override
         protected String[] doInBackground(String... params) {
@@ -113,7 +121,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String[] weatherData) {
-            // TODO (19) As soon as the data is finished loading, hide the loading indicator
+            // completed (19) As soon as the data is finished loading, hide the loading indicator
+            mContentLoadingProgressBar.setVisibility(View.INVISIBLE);
 
             if (weatherData != null) {
                 // completed (11) If the weather data was not null, make sure the data view is visible
