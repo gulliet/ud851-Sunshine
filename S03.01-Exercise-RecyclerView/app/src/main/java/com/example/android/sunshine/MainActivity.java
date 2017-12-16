@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
     // completed (10) Make the width and height wrap_content
     // completed (11) Give the TextView 16dp of padding
 
-    // TODO (12) Add a View to the layout with a width of match_parent and a height of 1dp
-    // TODO (13) Set the background color to #dadada
-    // TODO (14) Set the left and right margins to 8dp
+    // completed (12) Add a View to the layout with a width of match_parent and a height of 1dp
+    // completed (13) Set the background color to #dadada
+    // completed (14) Set the left and right margins to 8dp
     // Within forecast_list_item.xml //////////////////////////////////////////////////////////////
 
 
