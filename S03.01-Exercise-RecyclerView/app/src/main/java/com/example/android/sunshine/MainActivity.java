@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
          * do things like set the text of the TextView.
          */
 
-        // TODO (37) Use findViewById to get a reference to the RecyclerView
+        // completed (37) Use findViewById to get a reference to the RecyclerView
+        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_forecast);
 
         /* This TextView is used to display errors and will be hidden if there are no errors */
         mErrorMessageDisplay = (TextView) findViewById(R.id.tv_error_message_display);
