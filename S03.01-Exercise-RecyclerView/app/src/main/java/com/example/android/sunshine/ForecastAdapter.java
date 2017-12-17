@@ -43,7 +43,8 @@ public class ForecastAdapter
     // completed (28) Set the text of the TextView to the weather for this list item's position
     @Override
     public void onBindViewHolder(ForecastAdapterViewHolder holder, int position) {
-        holder.mWeatherTextView.setText(String.valueOf(position));
+        //holder.mWeatherTextView.setText(String.valueOf(position));
+        holder.mWeatherTextView.setText(mWeatherData[position]);
     }
 
     // completed (29) Override getItemCount
