@@ -56,9 +56,10 @@ public class ForecastAdapter
     }
 
     // completed (31) Create a setWeatherData method that saves the weatherData to mWeatherData
-    // TODO (32) After you save mWeatherData, call notifyDataSetChanged
+    // completed (32) After you save mWeatherData, call notifyDataSetChanged
     public void setWeatherData(String[] weatherData) {
         mWeatherData = weatherData.clone();
+        notifyDataSetChanged();
     }
 
     // completed (16) Create a class within ForecastAdapter called ForecastAdapterViewHolder
