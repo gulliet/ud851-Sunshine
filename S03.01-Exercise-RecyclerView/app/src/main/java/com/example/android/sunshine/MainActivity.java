@@ -48,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
     // completed (14) Set the left and right margins to 8dp
     // Within forecast_list_item.xml //////////////////////////////////////////////////////////////
 
-    // TODO (33) Delete mWeatherTextView
-    private TextView mWeatherTextView;
+    // completed (33) Delete mWeatherTextView
 
     // TODO (34) Add a private RecyclerView variable called mRecyclerView
     // TODO (35) Add a private ForecastAdapter variable called mForecastAdapter
