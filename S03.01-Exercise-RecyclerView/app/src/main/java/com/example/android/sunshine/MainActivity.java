@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
     // completed (34) Add a private RecyclerView variable called mRecyclerView
     private RecyclerView mRecyclerView;
 
-    // TODO (35) Add a private ForecastAdapter variable called mForecastAdapter
+    // completed (35) Add a private ForecastAdapter variable called mForecastAdapter
+    private ForecastAdapter mForecastAdapter;
 
     private TextView mErrorMessageDisplay;
 
