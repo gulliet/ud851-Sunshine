@@ -82,7 +82,8 @@ public class MainActivity extends AppCompatActivity {
         // completed (38) Create layoutManager, a LinearLayoutManager with VERTICAL orientation and shouldReverseLayout == false
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
-        // TODO (39) Set the layoutManager on mRecyclerView
+        // completed (39) Set the layoutManager on mRecyclerView
+        mRecyclerView.setLayoutManager(layoutManager);
 
         // TODO (40) Use setHasFixedSize(true) on mRecyclerView to designate that all items in the list will have the same size
 
