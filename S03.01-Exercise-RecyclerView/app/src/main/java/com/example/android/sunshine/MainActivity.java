@@ -141,9 +141,9 @@ public class MainActivity extends AppCompatActivity {
      * need to check whether each view is currently visible or invisible.
      */
     private void showErrorMessage() {
-        // TODO (44) Hide mRecyclerView, not mWeatherTextView
+        // completed (44) Hide mRecyclerView, not mWeatherTextView
         /* First, hide the currently visible data */
-        mWeatherTextView.setVisibility(View.INVISIBLE);
+        mRecyclerView.setVisibility(View.INVISIBLE);
         /* Then, show the error */
         mErrorMessageDisplay.setVisibility(View.VISIBLE);
     }
