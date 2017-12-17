@@ -20,7 +20,9 @@ public class ForecastAdapter
     // completed (23) Create a private string array called mWeatherData
     private String[] mWeatherData;
 
-    // TODO (47) Create the default constructor (we will pass in parameters in a later lesson)
+    // completed (47) Create the default constructor (we will pass in parameters in a later lesson)
+    ForecastAdapter() {
+    }
 
     // completed (24) Override onCreateViewHolder
     // completed (25) Within onCreateViewHolder, inflate the list item xml into a view
