@@ -26,6 +26,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.sunshine.data.SunshinePreferences;
 import com.example.android.sunshine.utilities.NetworkUtils;
@@ -109,10 +110,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     // completed (9) Override ForecastAdapterOnClickHandler's onClick method
-    // TODO (10) Show a Toast when an item is clicked, displaying that item's weather data
+    // completed (10) Show a Toast when an item is clicked, displaying that item's weather data
     @Override
     public void onClick(String weather) {
-
+        Toast.makeText(this, weather, Toast.LENGTH_SHORT).show();
     }
 
     /**
