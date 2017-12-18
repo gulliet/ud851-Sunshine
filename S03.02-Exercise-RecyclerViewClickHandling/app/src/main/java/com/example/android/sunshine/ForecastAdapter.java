@@ -36,7 +36,7 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
     // completed (1) Add an interface called ForecastAdapterOnClickHandler
     // completed (2) Within that interface, define a void method that access a String as a parameter
     interface ForecastAdapterOnClickHandler {
-        void voidMethodThatAccessAString(String s);
+        void onClick(String weather);
     }
 
     // completed (4) Add a ForecastAdapterOnClickHandler as a parameter to the constructor and store it in mClickHandler
@@ -59,7 +59,13 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
             // TODO (7) Call setOnClickListener on the view passed into the constructor (use 'this' as the OnClickListener)
         }
 
-        // TODO (6) Override onClick, passing the clicked day's data to mClickHandler via its onClick method
+        // completed (6) Override onClick, passing the clicked day's data to mClickHandler via its onClick method
+        @Override
+        public void onClick(View view) {
+            int clickedPosition = getAdapterPosition();
+            String weather = mWeatherData[clickedPosition];
+            mClickHandler.onClick(weather);
+        }
     }
 
     /**
