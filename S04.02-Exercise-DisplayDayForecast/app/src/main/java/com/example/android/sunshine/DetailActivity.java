@@ -14,16 +14,22 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        // TODO (2) Display the weather forecast that was passed from MainActivity
+        // completed (2) Display the weather forecast that was passed from MainActivity
+
         TextView detailStringTextView = (TextView) findViewById(R.id.tv_detail_string);
+
         //Get the intent
         Intent parentIntent = getIntent();
+
         //Check if the intent actually exists
         if (parentIntent != null) {
-        // if it exists check if it has our text
+
+            // if it exists check if it has our text
             if (parentIntent.hasExtra(Intent.EXTRA_TEXT)) {
-            // if it has our text get our text
+
+                // if it has our text get our text and display it
                 String giveMeTheText = parentIntent.getStringExtra(Intent.EXTRA_TEXT);
+                detailStringTextView.setText(giveMeTheText);
             }
         }
 
