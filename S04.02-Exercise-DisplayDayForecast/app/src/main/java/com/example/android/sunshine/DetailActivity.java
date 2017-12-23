@@ -2,6 +2,7 @@ package com.example.android.sunshine;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -13,5 +14,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         // TODO (2) Display the weather forecast that was passed from MainActivity
+        TextView detailStringTextView = (TextView) findViewById(R.id.tv_detail_string);
+
     }
 }
