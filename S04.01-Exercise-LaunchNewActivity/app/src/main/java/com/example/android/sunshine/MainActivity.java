@@ -121,7 +121,8 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         // completed (1) Create a new Activity called DetailActivity using Android Studio's wizard
         // completed (2) Change the root layout of activity_detail.xml to a FrameLayout and remove unnecessary xml attributes
         // completed (3) Remove the Toast and launch the DetailActivity using an explicit Intent
-        Intent intent = new Intent(context, DetailActivity.class);
+        Class<DetailActivity> destinationClass = DetailActivity.class;
+        Intent intent = new Intent(context, destinationClass);
         startActivity(intent);
     }
 
