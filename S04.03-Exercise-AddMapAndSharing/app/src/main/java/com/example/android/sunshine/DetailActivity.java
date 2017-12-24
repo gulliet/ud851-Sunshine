@@ -49,7 +49,7 @@ public class DetailActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
-            case R.menu.detail:
+            case R.id.action_share:
                 shareWeatherDetails();
                 return true;
             default:
