@@ -225,6 +225,7 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         // completed (2) Launch the map when the map menu item is clicked
         if (id == R.id.action_locate) {
             findMyPub();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
