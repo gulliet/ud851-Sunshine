@@ -222,15 +222,24 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
             return true;
         }
 
-        // TODO (2) Launch the map when the map menu item is clicked
+        // completed (2) Launch the map when the map menu item is clicked
         if (id == R.id.action_locate) {
-            Toast.makeText(this, "Geographic search in progress...", Toast.LENGTH_LONG).show();
+            findMyPub();
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    public void showMap(Uri geoLocation) {
+    private void findMyPub() {
+        //the pubs address
+        String pubAddress = "118-20 Market St, Torquay TQ1 3AQ";
+        //create a Uri
+        Uri geoLocation = Uri.parse("geo:0,0?q=" + pubAddress);
+
+        showMap(geoLocation);
+    }
+
+    private void showMap(Uri geoLocation) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(geoLocation);
         if (intent.resolveActivity(getPackageManager()) != null) {
