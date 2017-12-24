@@ -30,6 +30,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.sunshine.ForecastAdapter.ForecastAdapterOnClickHandler;
 import com.example.android.sunshine.data.SunshinePreferences;
@@ -222,6 +223,9 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         }
 
         // TODO (2) Launch the map when the map menu item is clicked
+        if (id == R.id.action_locate) {
+            Toast.makeText(this, "Geographic search in progress...", Toast.LENGTH_LONG).show();
+        }
 
         return super.onOptionsItemSelected(item);
     }
