@@ -229,4 +229,12 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void showMap(Uri geoLocation) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(geoLocation);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 }
