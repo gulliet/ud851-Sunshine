@@ -146,7 +146,18 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         };
     }
 
-    // TODO (4) When the load is finished, show either the data or an error message if there is no data
+    // completed (4) When the load is finished, show either the data or an error message if there is no data
+
+    @Override
+    public void onLoadFinished(Loader<String[]> loader, String[] strings) {
+        mLoadingIndicator.setVisibility(View.INVISIBLE);
+        mForecastAdapter.setWeatherData(strings);
+        if (strings == null) {
+            showErrorMessage();
+        } else {
+            showWeatherDataView();
+        }
+    }
 
     /**
      * This method is overridden by our MainActivity class in order to handle RecyclerView item
