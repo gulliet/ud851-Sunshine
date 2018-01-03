@@ -122,26 +122,29 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
 
     @Override
     public Loader<String[]> onCreateLoader(int i, Bundle bundle) {
-        return new AsyncTaskLoader<String>(this) {
+        return new AsyncTaskLoader<String[]>(this) {
 
             /* This String array will hold and help cache our weather data */
             String[] mWeatherData = null;
+
+            // completed (3) Cache the weather data in a member variable and deliver it in onStartLoading.
 
             @Override
             protected void onStartLoading() {
                 if (mWeatherData != null) {
                     deliverResult(mWeatherData);
+                } else {
+                    mLoadingIndicator.setVisibility(View.VISIBLE);
+                    forceLoad();
                 }
             }
 
             @Override
-            public String loadInBackground() {
+            public String[] loadInBackground() {
                 return null;
             }
         };
     }
-
-    // TODO (3) Cache the weather data in a member variable and deliver it in onStartLoading.
 
     // TODO (4) When the load is finished, show either the data or an error message if there is no data
 
