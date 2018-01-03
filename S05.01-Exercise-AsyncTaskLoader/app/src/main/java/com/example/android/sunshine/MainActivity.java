@@ -43,7 +43,7 @@ import java.net.URL;
 
 // completed (1) Implement the proper LoaderCallbacks interface and the methods of that interface
 public class MainActivity extends AppCompatActivity implements ForecastAdapterOnClickHandler,
-        LoaderManager.LoaderCallbacks<String> {
+        LoaderManager.LoaderCallbacks<String[]> {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -121,11 +121,18 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
     // completed (2) Within onCreateLoader, return a new AsyncTaskLoader that looks a lot like the existing FetchWeatherTask.
 
     @Override
-    public Loader<String> onCreateLoader(int i, Bundle bundle) {
+    public Loader<String[]> onCreateLoader(int i, Bundle bundle) {
         return new AsyncTaskLoader<String>(this) {
 
             /* This String array will hold and help cache our weather data */
             String[] mWeatherData = null;
+
+            @Override
+            protected void onStartLoading() {
+                if (mWeatherData != null) {
+                    deliverResult(mWeatherData);
+                }
+            }
 
             @Override
             public String loadInBackground() {
