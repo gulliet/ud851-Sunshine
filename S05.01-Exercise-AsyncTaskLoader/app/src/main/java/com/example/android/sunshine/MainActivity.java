@@ -15,6 +15,7 @@
  */
 package com.example.android.sunshine;
 
+import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -38,8 +39,9 @@ import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
 
 import java.net.URL;
 
-// TODO (1) Implement the proper LoaderCallbacks interface and the methods of that interface
-public class MainActivity extends AppCompatActivity implements ForecastAdapterOnClickHandler {
+// completed (1) Implement the proper LoaderCallbacks interface and the methods of that interface
+public class MainActivity extends AppCompatActivity implements ForecastAdapterOnClickHandler,
+        LoaderManager.LoaderCallbacks<String> {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
