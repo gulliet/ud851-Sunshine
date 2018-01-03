@@ -16,8 +16,10 @@
 package com.example.android.sunshine;
 
 import android.app.LoaderManager;
+import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.content.Intent;
+import android.content.Loader;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -116,7 +118,22 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         new FetchWeatherTask().execute(location);
     }
 
-    // TODO (2) Within onCreateLoader, return a new AsyncTaskLoader that looks a lot like the existing FetchWeatherTask.
+    // completed (2) Within onCreateLoader, return a new AsyncTaskLoader that looks a lot like the existing FetchWeatherTask.
+
+    @Override
+    public Loader<String> onCreateLoader(int i, Bundle bundle) {
+        return new AsyncTaskLoader<String>(this) {
+
+            /* This String array will hold and help cache our weather data */
+            String[] mWeatherData = null;
+
+            @Override
+            public String loadInBackground() {
+                return null;
+            }
+        };
+    }
+
     // TODO (3) Cache the weather data in a member variable and deliver it in onStartLoading.
 
     // TODO (4) When the load is finished, show either the data or an error message if there is no data
