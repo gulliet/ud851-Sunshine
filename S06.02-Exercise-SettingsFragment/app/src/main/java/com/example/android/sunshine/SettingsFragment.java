@@ -23,9 +23,10 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
     // TODO (11) Override onSharedPreferenceChanged to update non CheckBoxPreferences when they are changed
 
-    // TODO (5) Override onCreatePreferences and add the preference xml file using addPreferencesFromResource
+    // completed (5) Override onCreatePreferences and add the preference xml file using addPreferencesFromResource
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        addPreferencesFromResource(R.xml.pref_general);
         // Do step 9 within onCreatePreference
         // TODO (9) Set the preference summary on each preference that isn't a CheckBoxPreference
 
