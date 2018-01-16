@@ -1,6 +1,7 @@
 package com.example.android.sunshine;
 
 import android.os.Bundle;
+import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 
 /**
@@ -14,8 +15,10 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     // Do steps 5 - 11 within SettingsFragment
     // TODO (10) Implement OnSharedPreferenceChangeListener from SettingsFragment
 
-    // TODO (8) Create a method called setPreferenceSummary that accepts a Preference and an Object and sets the summary of the preference
+    // completed (8) Create a method called setPreferenceSummary that accepts a Preference and an Object and sets the summary of the preference
+    private void setPreferenceSummary(Preference preference, Object value) {
 
+    }
 
     // TODO (13) Unregister SettingsFragment (this) as a SharedPreferenceChangedListener in onStop
 
