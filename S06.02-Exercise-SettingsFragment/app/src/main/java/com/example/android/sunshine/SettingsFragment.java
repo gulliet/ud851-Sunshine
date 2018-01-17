@@ -38,7 +38,14 @@ public class SettingsFragment extends PreferenceFragmentCompat
 
     // TODO (13) Unregister SettingsFragment (this) as a SharedPreferenceChangedListener in onStop
 
-    // TODO (12) Register SettingsFragment (this) as a SharedPreferenceChangedListener in onStart
+    // completed (12) Register SettingsFragment (this) as a SharedPreferenceChangedListener in onStart
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        getPreferenceScreen().getSharedPreferences()
+                .registerOnSharedPreferenceChangeListener(this);
+    }
 
     // completed (5) Override onCreatePreferences and add the preference xml file using addPreferencesFromResource
     @Override
