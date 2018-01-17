@@ -42,7 +42,9 @@ public class WeatherContract {
         // completed (5) Create a public static final String call COLUMN_MIN_TEMP with the value "min"
         public static final String COLUMN_MIN_TEMP = "min";
 
-        // TODO (6) Create a public static final String call COLUMN_MAX_TEMP with the value "max"
+        // completed (6) Create a public static final String call COLUMN_MAX_TEMP with the value "max"
+        public static final String COLUMN_MAX_TEMP = "max";
+
         // TODO (7) Create a public static final String call COLUMN_HUMIDITY with the value "humidity"
         // TODO (8) Create a public static final String call COLUMN_PRESSURE with the value "pressure"
         // TODO (9) Create a public static final String call COLUMN_WIND_SPEED with the value "wind"
