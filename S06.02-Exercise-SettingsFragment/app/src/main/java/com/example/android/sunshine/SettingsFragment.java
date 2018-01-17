@@ -36,7 +36,14 @@ public class SettingsFragment extends PreferenceFragmentCompat
         }
     }
 
-    // TODO (13) Unregister SettingsFragment (this) as a SharedPreferenceChangedListener in onStop
+    // completed (13) Unregister SettingsFragment (this) as a SharedPreferenceChangedListener in onStop
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        getPreferenceScreen().getSharedPreferences()
+                .unregisterOnSharedPreferenceChangeListener(this);
+    }
 
     // completed (12) Register SettingsFragment (this) as a SharedPreferenceChangedListener in onStart
     @Override
