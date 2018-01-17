@@ -23,13 +23,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 // completed (11) Extend SQLiteOpenHelper from WeatherDbHelper
 public class WeatherDbHelper extends SQLiteOpenHelper {
 
-//  TODO (12) Create a public static final String called DATABASE_NAME with value "weather.db"
+    // completed (12) Create a public static final String called DATABASE_NAME with value "weather.db"
+    public static final String DATABASE_NAME = "weather.db";
 
-//  TODO (13) Create a private static final int called DATABASE_VERSION and set it to 1
-
-//  TODO (14) Create a constructor that accepts a context and call through to the superclass constructor
-
-//  TODO (15) Override onCreate and create the weather table from within it
-
-//  TODO (16) Override onUpgrade, but don't do anything within it yet
+    // TODO (13) Create a private static final int called DATABASE_VERSION and set it to 1
+    // TODO (14) Create a constructor that accepts a context and call through to the superclass constructor
+    // TODO (15) Override onCreate and create the weather table from within it
+    // TODO (16) Override onUpgrade, but don't do anything within it yet
 }
