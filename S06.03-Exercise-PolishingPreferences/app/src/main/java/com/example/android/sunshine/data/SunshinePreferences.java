@@ -107,9 +107,17 @@ public class SunshinePreferences {
      * @return true If metric display should be used
      */
     public static boolean isMetric(Context context) {
-        // TODO (2) Return true if the user's preference for units is metric, false otherwise
-        /** This will be implemented in a future lesson **/
-        return true;
+        // completed (2) Return true if the user's preference for units is metric, false otherwise
+        SharedPreferences preferences = PreferenceManager
+                .getDefaultSharedPreferences(context);
+        String keyForUnits = context.getString(R.string.pref_units_key);
+        String metric = context.getString(R.string.pref_units_metric);
+        String preferredUnit = preferences.getString(keyForUnits, metric);
+        if (metric.equals(preferredUnit)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
