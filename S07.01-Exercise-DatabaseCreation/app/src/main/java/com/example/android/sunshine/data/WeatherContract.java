@@ -30,7 +30,9 @@ public class WeatherContract {
     public static final class WeatherEntry implements BaseColumns {
 
         // Do steps 2 through 10 within the WeatherEntry class
-        // TODO (2) Create a public static final String call TABLE_NAME with the value "weather"
+        // completed (2) Create a public static final String call TABLE_NAME with the value "weather"
+        public static final String TABLE_NAME = "weather";
+
         // TODO (3) Create a public static final String call COLUMN_DATE with the value "date"
         // TODO (4) Create a public static final String call COLUMN_WEATHER_ID with the value "weather_id"
         // TODO (5) Create a public static final String call COLUMN_MIN_TEMP with the value "min"
