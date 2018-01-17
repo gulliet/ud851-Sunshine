@@ -42,14 +42,14 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_WEATHER_TABLE = "CREATE TABLE " +
                 WeatherContract.WeatherEntry.TABLE_NAME + " (" +
                 WeatherContract.WeatherEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                WeatherContract.WeatherEntry.COLUMN_DATE + " TEXT NOT NULL, " +
-                WeatherContract.WeatherEntry.COLUMN_WEATHER_ID + " INTEGER NOT NULL, " +
-                WeatherContract.WeatherEntry.COLUMN_MIN_TEMP + " INTEGER NOT NULL, " +
-                WeatherContract.WeatherEntry.COLUMN_MAX_TEMP + " INTEGER NOT NULL, " +
-                WeatherContract.WeatherEntry.COLUMN_HUMIDITY + " INTEGER NOT NULL, " +
-                WeatherContract.WeatherEntry.COLUMN_PRESSURE + " INTEGER NOT NULL, " +
-                WeatherContract.WeatherEntry.COLUMN_WIND_SPEED + " INTEGER NOT NULL, " +
-                WeatherContract.WeatherEntry.COLUMN_DEGREES + " INTEGER NOT NULL) ";
+                WeatherContract.WeatherEntry.COLUMN_DATE + " INTEGER, " +
+                WeatherContract.WeatherEntry.COLUMN_WEATHER_ID + " INTEGER, " +
+                WeatherContract.WeatherEntry.COLUMN_MIN_TEMP + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_MAX_TEMP + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_HUMIDITY + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_PRESSURE + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_WIND_SPEED + " REAL, " +
+                WeatherContract.WeatherEntry.COLUMN_DEGREES + " REAL) ";
 
         sqLiteDatabase.execSQL(SQL_CREATE_WEATHER_TABLE);
     }
