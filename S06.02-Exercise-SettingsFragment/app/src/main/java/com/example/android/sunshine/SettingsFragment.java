@@ -59,10 +59,15 @@ public class SettingsFragment extends PreferenceFragmentCompat
         }
     }
 
-    // TODO (11) Override onSharedPreferenceChanged to update non CheckBoxPreferences when they are changed
+    // completed (11) Override onSharedPreferenceChanged to update non CheckBoxPreferences when they are changed
 
     @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        Preference preference = findPreference(key);
+        if (null != preference) {
+            if (!(preference instanceof CheckBoxPreference)) {
+                setPreferenceSummary(preference, sharedPreferences.getString(key, ""));
+            }
+        }
     }
 }
