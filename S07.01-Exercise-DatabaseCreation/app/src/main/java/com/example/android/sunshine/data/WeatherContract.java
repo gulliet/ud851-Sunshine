@@ -20,6 +20,8 @@ package com.example.android.sunshine.data;
  * the code organized.
  */
 public class WeatherContract {
+    // Prevent accidental instantiation of the contract class.
+    private WeatherContract() {}
 
 //  TODO (1) Within WeatherContract, create a public static final class called WeatherEntry that implements BaseColumns
 
