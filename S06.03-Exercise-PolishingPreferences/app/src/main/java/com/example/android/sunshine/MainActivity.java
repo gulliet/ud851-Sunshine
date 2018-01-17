@@ -390,5 +390,10 @@ public class MainActivity extends AppCompatActivity implements
         return super.onOptionsItemSelected(item);
     }
 
-    // TODO (5) Override onSharedPreferenceChanged to set the preferences flag to true
+    // completed (5) Override onSharedPreferenceChanged to set the preferences flag to true
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+        PREFERENCES_HAVE_BEEN_UPDATED = true;
+    }
 }
