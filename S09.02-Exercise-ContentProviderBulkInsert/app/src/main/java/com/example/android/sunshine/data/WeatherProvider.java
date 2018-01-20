@@ -170,9 +170,12 @@ public class WeatherProvider extends ContentProvider {
                     getContext().getContentResolver().notifyChange(uri, null);
                 }
                 return rowInserted;
+
+            // completed (4) If the URI does match match CODE_WEATHER, return the super implementation of bulkInsert
+            default:
+                return super.bulkInsert(uri, values);
         }
 
-//          TODO (4) If the URI does match match CODE_WEATHER, return the super implementation of bulkInsert
     }
 
     /**
