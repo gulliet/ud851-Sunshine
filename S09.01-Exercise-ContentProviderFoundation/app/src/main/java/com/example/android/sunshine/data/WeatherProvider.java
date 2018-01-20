@@ -105,9 +105,37 @@ public class WeatherProvider extends ContentProvider {
         int match = sUriMatcher.match(uri);
         Cursor cursor;
 
-//      TODO (9) Handle queries on both the weather and weather with date URI
+//      completed (9) Handle queries on both the weather and weather with date URI
+        switch (match) {
+            case CODE_WEATHER:
+                cursor = db.query(WeatherContract.WeatherEntry.TABLE_NAME,
+                        projection,
+                        selection,
+                        selectionArgs,
+                        null,
+                        null,
+                        sortOrder);
+                break;
+            case CODE_WEATHER_WITH_DATE:
+                String stringDate = uri.getPathSegments().get(1);
+                String mSelection = WeatherContract.WeatherEntry.COLUMN_DATE + "=?";
+                String[] mSelectionArgs = new String[]{stringDate};
+                cursor = db.query(WeatherContract.WeatherEntry.TABLE_NAME,
+                        projection,
+                        mSelection,
+                        mSelectionArgs,
+                        null,
+                        null,
+                        sortOrder);
+
+                break;
+            default:
+                throw new UnsupportedOperationException("[QUERY] Unknown uri: " + uri);
+        }
 
 //      TODO (10) Call setNotificationUri on the cursor and then return the cursor
+
+        return cursor;
     }
 
     /**
