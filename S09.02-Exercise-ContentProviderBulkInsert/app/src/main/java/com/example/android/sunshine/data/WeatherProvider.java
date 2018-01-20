@@ -165,7 +165,11 @@ public class WeatherProvider extends ContentProvider {
                 } finally {
                     db.endTransaction();
                 }
-//              TODO (3) Return the number of rows inserted from our implementation of bulkInsert
+//              completed (3) Return the number of rows inserted from our implementation of bulkInsert
+                if (rowInserted > 0) {
+                    getContext().getContentResolver().notifyChange(uri, null);
+                }
+                return rowInserted;
         }
 
 //          TODO (4) If the URI does match match CODE_WEATHER, return the super implementation of bulkInsert
