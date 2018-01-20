@@ -127,13 +127,13 @@ public class WeatherProvider extends ContentProvider {
                         null,
                         null,
                         sortOrder);
-
                 break;
             default:
                 throw new UnsupportedOperationException("[QUERY] Unknown uri: " + uri);
         }
 
-//      TODO (10) Call setNotificationUri on the cursor and then return the cursor
+//      completed (10) Call setNotificationUri on the cursor and then return the cursor
+        cursor.setNotificationUri(getContext().getContentResolver(), uri);
 
         return cursor;
     }
