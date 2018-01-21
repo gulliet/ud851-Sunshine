@@ -306,11 +306,23 @@ public class WeatherProvider extends ContentProvider {
     public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
 
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();
-        int rowsDeleted;
+        int match = sUriMatcher.match(uri);
+        int rowsDeleted = 0;
 
-//          TODO (2) Only implement the functionality, given the proper URI, to delete ALL rows in the weather table
+//          completed (2) Only implement the functionality, given the proper URI, to delete ALL rows in the weather table
+        switch (match) {
+            case CODE_WEATHER:
+                rowsDeleted = db.delete(WeatherContract.WeatherEntry.TABLE_NAME,
+                        null,
+                        null);
+                break;
+
+            default:
+                throw new IllegalArgumentException("[DELETE] Unknown uri: " + uri);
+        }
 
 //      TODO (3) Return the number of rows deleted
+        return rowsDeleted;
     }
 
     /**
