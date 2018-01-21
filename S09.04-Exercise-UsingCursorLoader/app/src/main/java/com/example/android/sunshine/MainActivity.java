@@ -48,9 +48,9 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity implements
 //      completed (15) Remove the implements declaration for SharedPreferences change listener and methods
-//      TODO (20) Implement LoaderCallbacks<Cursor> instead of String[]
+//      completed (20) Implement LoaderCallbacks<Cursor> instead of String[]
         ForecastAdapter.ForecastAdapterOnClickHandler,
-        LoaderManager.LoaderCallbacks<String[]> {
+        LoaderManager.LoaderCallbacks<Cursor> {
 
     private final String TAG = MainActivity.class.getSimpleName();
 
