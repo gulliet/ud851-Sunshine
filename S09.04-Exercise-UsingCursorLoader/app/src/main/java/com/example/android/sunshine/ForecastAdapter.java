@@ -100,7 +100,9 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
     @Override
     public void onBindViewHolder(ForecastAdapterViewHolder forecastAdapterViewHolder, int position) {
 //      completed (5) Delete the current body of onBindViewHolder
-//      TODO (6) Move the cursor to the appropriate position
+//      completed (6) Move the cursor to the appropriate position
+        mCursor.moveToPosition(position);
+
 //      TODO (7) Generate a weather summary with the date, description, high and low
 
 //      TODO (8) Display the summary that you created above
