@@ -47,17 +47,25 @@ import java.net.URL;
 
 
 public class MainActivity extends AppCompatActivity implements
-//      TODO (15) Remove the implements declaration for SharedPreferences change listener and methods
+//      completed (15) Remove the implements declaration for SharedPreferences change listener and methods
 //      TODO (20) Implement LoaderCallbacks<Cursor> instead of String[]
         ForecastAdapter.ForecastAdapterOnClickHandler,
-        LoaderManager.LoaderCallbacks<String[]>,
-        SharedPreferences.OnSharedPreferenceChangeListener {
+        LoaderManager.LoaderCallbacks<String[]> {
 
     private final String TAG = MainActivity.class.getSimpleName();
 
-//  TODO (16) Create a String array containing the names of the desired data columns from our ContentProvider
+//  completed (16) Create a String array containing the names of the desired data columns from our ContentProvider
+    String[] dataColumnNames =
+        {WeatherContract.WeatherEntry.COLUMN_DATE,
+        WeatherContract.WeatherEntry.COLUMN_WEATHER_ID,
+        WeatherContract.WeatherEntry.COLUMN_MAX_TEMP,
+        WeatherContract.WeatherEntry.COLUMN_MIN_TEMP};
 
-//  TODO (17) Create constant int values representing each column name's position above
+//  completed (17) Create constant int values representing each column name's position above
+    public final int INDEX_DATE = 0;
+    public final int INDEX_DESCRIPTION = 1;
+    public final int INDEX_MAX_TEMP = 2;
+    public final int INDEX_MIN_TEMP = 3;
 
 //  TODO (37) Remove the error TextView
     private TextView mErrorMessageDisplay;

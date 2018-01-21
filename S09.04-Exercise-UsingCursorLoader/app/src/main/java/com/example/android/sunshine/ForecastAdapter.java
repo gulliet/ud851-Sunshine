@@ -23,6 +23,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.android.sunshine.data.WeatherContract;
+
 /**
  * {@link ForecastAdapter} exposes a list of weather forecasts
  * from a {@link android.database.Cursor} to a {@link android.support.v7.widget.RecyclerView}.
@@ -104,6 +106,8 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         mCursor.moveToPosition(position);
 
 //      TODO (7) Generate a weather summary with the date, description, high and low
+        String date = mCursor.getString(MainActivity.INDEX);
+        double high = mCursor.getDouble(MainActivity.INDEX)
 
 //      TODO (8) Display the summary that you created above
 
