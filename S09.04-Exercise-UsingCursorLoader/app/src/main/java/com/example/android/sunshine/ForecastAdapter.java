@@ -52,16 +52,18 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
 //  completed (2) Declare a private Cursor field called mCursor
     private Cursor mCursor;
 
-//  TODO (3) Add a Context field to the constructor and store that context in mContext
+//  completed (3) Add a Context field to the constructor and store that context in mContext
 
     /**
      * Creates a ForecastAdapter.
      *
      * @param clickHandler The on-click handler for this adapter. This single handler is called
      *                     when an item is clicked.
+     * @param context The current callee context.
      */
-    public ForecastAdapter(ForecastAdapterOnClickHandler clickHandler) {
+    public ForecastAdapter(ForecastAdapterOnClickHandler clickHandler, Context context) {
         mClickHandler = clickHandler;
+        mContext = context;
     }
 
     /**
