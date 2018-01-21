@@ -321,7 +321,10 @@ public class WeatherProvider extends ContentProvider {
                 throw new IllegalArgumentException("[DELETE] Unknown uri: " + uri);
         }
 
-//      TODO (3) Return the number of rows deleted
+//      completed (3) Return the number of rows deleted
+        if (rowsDeleted > 0) {
+            getContext().getContentResolver().notifyChange(uri, null);
+        }
         return rowsDeleted;
     }
 
