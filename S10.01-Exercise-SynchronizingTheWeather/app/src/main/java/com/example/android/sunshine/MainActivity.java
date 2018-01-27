@@ -86,8 +86,7 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_forecast);
         getSupportActionBar().setElevation(0f);
 
-        // TODO (12) Remove the fake data creation since we can now sync with live data
-        FakeDataUtils.insertFakeData(this);
+        // completed (12) Remove the fake data creation since we can now sync with live data
 
         /*
          * Using findViewById, we get a reference to our RecyclerView from xml. This allows us to
