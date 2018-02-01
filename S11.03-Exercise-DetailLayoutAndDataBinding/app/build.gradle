@@ -18,10 +18,8 @@ android {
         }
     }
 
-//  completed (1) Enable databinding
-    dataBinding {
-        enabled true
-    }
+//  COMPLETED (1) Enable databinding
+    dataBinding.enabled = true
 }
 
 dependencies {
