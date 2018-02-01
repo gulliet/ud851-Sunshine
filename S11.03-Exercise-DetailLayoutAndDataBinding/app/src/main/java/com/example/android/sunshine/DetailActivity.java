@@ -103,14 +103,7 @@ public class DetailActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
 //      completed (4) Remove the call to setContentView
 
-//      TODO (5) Remove all the findViewById calls
-        mDateView = (TextView) findViewById(R.id.date);
-        mDescriptionView = (TextView) findViewById(R.id.weather_description);
-        mHighTemperatureView = (TextView) findViewById(R.id.high_temperature);
-        mLowTemperatureView = (TextView) findViewById(R.id.low_temperature);
-        mHumidityView = (TextView) findViewById(R.id.humidity);
-        mWindView = (TextView) findViewById(R.id.wind);
-        mPressureView = (TextView) findViewById(R.id.pressure);
+//      completed (5) Remove all the findViewById calls
 
 //      TODO (6) Instantiate mDetailBinding using DataBindingUtil
 
